@@ -1,8 +1,21 @@
+import { Product } from './Product';
+import { httpErrorMap } from '../utils/httpMap';
+
 export type User = {
   id: number;
   username: string;
   vocation: string;
   level: number;
   password: string;
-  productIds?: number[];
+  productIds?: Product[];
+};
+
+export type Data = {
+  username: string,
+  productIds?: number[],
+};
+
+export type UserReturn = {
+  status: keyof typeof httpErrorMap;
+  data: Data[]
 };
