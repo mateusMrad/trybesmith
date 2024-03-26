@@ -19,3 +19,12 @@ export type UserReturn = {
   status: keyof typeof httpErrorMap;
   data: Data[]
 };
+
+export type LoginT = {
+  username: string,
+  password: string,
+};
+
+export type TokenT = {
+  token: string,
+};
